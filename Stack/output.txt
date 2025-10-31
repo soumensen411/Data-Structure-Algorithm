@@ -1,0 +1,13 @@
+Top Element: 30
+Size : 3
+	stack elements
+	---------------
+30 -> 20 -> 10
+After pop 
+	stack elements
+	---------------
+20 -> 10
+Is empty? NO
+	stack elements
+	---------------
+100 -> 50 -> 20 -> 10
