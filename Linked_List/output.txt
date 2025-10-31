@@ -1,0 +1,8 @@
+Size of the list: 5
+15 10 100 5 30 
+Head: 15 Tail: 30
+15 100 5 30 
+Head: 15 Tail: 30
+Size of the list: 4
+30 5 100 15 
+Head: 30 Tail: 15

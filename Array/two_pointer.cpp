@@ -8,13 +8,7 @@
 #define yes "YES\n"
 #define no "NO\n"
 using namespace std;
-void inputOutput()
-{
-#ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-#endif
-}
+
 // Given a 1-indexed sorted array of integers numbers and a target sum target, find two numbers that add up to target.
 void two_sum(int arr[], int target, int size)
 {
@@ -78,7 +72,6 @@ void solve()
 }
 int main()
 {
-    inputOutput();
     optimize();
     solve();
     return 0;
