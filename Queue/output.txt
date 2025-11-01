@@ -1,0 +1,18 @@
+	 Queue elements
+	---------------
+10 -> 20 -> 30
+
+Front element: 10
+Rear element: 30
+Queue size: 3
+	 Queue elements
+	---------------
+20 -> 30
+
+	 Queue elements
+	---------------
+20 -> 30 -> 50 -> 60
+
+Front element: 20
+Rear element: 60
+Queue size: 4
