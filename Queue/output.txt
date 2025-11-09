@@ -1,18 +1,50 @@
-	 Queue elements
-	---------------
-10 -> 20 -> 30
+=== Basic Priority Queue Operations ===
 
-Front element: 10
-Rear element: 30
-Queue size: 3
-	 Queue elements
-	---------------
-20 -> 30
+After inserting elements:
+Priority Queue (Data:Priority):
+[40:8] [20:5] [50:3] [10:2] [30:1] 
 
-	 Queue elements
-	---------------
-20 -> 30 -> 50 -> 60
+Highest priority element: 40 (Priority: 8)
 
-Front element: 20
-Rear element: 60
-Queue size: 4
+Dequeuing highest priority element...
+Priority Queue (Data:Priority):
+[20:5] [50:3] [10:2] [30:1] 
+Size: 4
+=== Hospital Emergency Room Simulation ===
+
+Patients arriving:
+Patient 101 - Urgent (Priority 5)
+Patient 102 - Minor (Priority 1)
+Patient 103 - CRITICAL (Priority 10)
+Patient 104 - Urgent (Priority 5)
+Patient 105 - Moderate (Priority 3)
+
+Priority Queue (Data:Priority):
+[103:10] [101:5] [104:5] [105:3] [102:1] 
+
+Treating patients in priority order:
+Treating Patient 103 (Priority: 10)
+Treating Patient 101 (Priority: 5)
+Treating Patient 104 (Priority: 5)
+Treating Patient 105 (Priority: 3)
+Treating Patient 102 (Priority: 1)
+
+
+=== CPU Task Scheduling Simulation ===
+
+Tasks arriving:
+Task 1 - Normal (Priority 3)
+Task 2 - High (Priority 8)
+Task 3 - Low (Priority 1)
+Task 4 - CRITICAL (Priority 10)
+Task 5 - Medium (Priority 5)
+
+Priority Queue (Data:Priority):
+[4:10] [2:8] [5:5] [1:3] [3:1] 
+
+Executing tasks in priority order:
+Executing Task 4 (Priority: 10)
+Executing Task 2 (Priority: 8)
+Executing Task 5 (Priority: 5)
+Executing Task 1 (Priority: 3)
+Executing Task 3 (Priority: 1)
