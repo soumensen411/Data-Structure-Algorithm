@@ -2,26 +2,26 @@
 using namespace std;
 class Graph
 {
-    int v;
-    list<int> *l;
+    int newVertices;
+    list<int> *adjList;
 
 public:
-    Graph(int v)
+    Graph(int vertices)
     {
-        this->v = v;
-        l = new list<int>[v];
+        this->newVertices = vertices;
+        adjList = new list<int>[vertices];
     }
     void addEdges(int u, int v)
     {
-        l[u].push_back(v);
-        l[v].push_back(u);
+        adjList[u].push_back(v);
+        adjList[v].push_back(u);
     }
     void printList()
     {
-        for (int i = 0; i < v; i++)
+        for (int i = 0; i < newVertices; i++)
         {
             cout << i << " : ";
-            for (int height : l[i]){
+            for (int height : adjList[i]){
                 cout << height<<" ";
         }
         cout << endl;
@@ -30,6 +30,7 @@ public:
 };
 int main()
 {
+    freopen("output.txt","w",stdout);
     Graph g(5);
     g.addEdges(0,1);
     g.addEdges(1,2);
