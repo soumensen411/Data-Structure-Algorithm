@@ -1,0 +1,27 @@
+
+Traversal Tree in PreOrder sequence
+------------------------------------
+50 30 20 40 35 45 70 60 65 80 90 
+
+
+Traversal Tree in InOrder sequence
+------------------------------------
+20 30 35 40 45 50 60 65 70 80 90 
+
+
+Traversal Tree in PostOrder sequence
+------------------------------------
+20 35 45 40 30 65 60 90 80 70 50 
+
+
+Traversal Tree in LevelOrder sequence
+------------------------------------
+50 30 70 20 40 60 80 35 45 65 90 
+
+
+Traversal Tree in LevelOrder with new line sequence
+------------------------------------
+50 
+30 70 
+20 40 60 80 
+35 45 65 90 

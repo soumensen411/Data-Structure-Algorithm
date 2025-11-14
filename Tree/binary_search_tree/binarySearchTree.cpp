@@ -60,6 +60,7 @@ void inorderTraversal(Node *root)
 }
 int main()
 {
+    freopen("output.txt","w",stdout);
     vector<int> v = {50, 30, 20, 40, 35, 45, 70, 60, 65, 80, 90};
     Node *root = nullptr;
     for (auto i : v)
@@ -67,5 +68,6 @@ int main()
         root = buildBinarySerarchTree(root, i);
     }
     inorderTraversal(root);
-    cout << (search(root, 50) ? "Yes" : "NO") << endl;
+    cout<<endl;
+    cout << (search(root, 50) ? "Yes" : "NO") << endl; // searching value fram a bst 
 }
