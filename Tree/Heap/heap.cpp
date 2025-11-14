@@ -46,11 +46,15 @@ public:
             int left = 2 * index + 1;
             int right = 2 * index + 2;
             int largest = index;
-            if (left > size && v[left]>v[largest]){
+            if (left < size && v[left]>v[largest]){
                 largest = left;
             }
-            if(right > size && v[right]>v[largest]){
+            if(right < size && v[right]>v[largest]){
                 largest = right;
+            }
+            if(largest != index){
+                swap(v[largest],v[index]);
+                index = largest;
             }
             else break;
         }
