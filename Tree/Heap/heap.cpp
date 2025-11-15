@@ -79,6 +79,8 @@ public:
     }
 };
 
+
+// build max heap
 void heapify(vector<int> &arr, int size, int heapifyIndx)
 {
     int left = 2 * heapifyIndx + 1;
@@ -99,6 +101,27 @@ void heapify(vector<int> &arr, int size, int heapifyIndx)
     }
 }
 
+// build min heap
+void Minheapify(vector<int> &arr, int size, int heapifyIndx)
+{
+    int left = 2 * heapifyIndx + 1;
+    int right = 2 * heapifyIndx + 2;
+    int smallest = heapifyIndx;
+    if (left < size && arr[left] < arr[smallest])
+    {
+        smallest = left;
+    }
+    if (right < size && arr[right] < arr[smallest])
+    {
+        smallest = right;
+    }
+    if (smallest != heapifyIndx)
+    {
+        swap(arr[smallest], arr[heapifyIndx]);
+        Minheapify(arr, size, smallest);
+    }
+}
+
 void display(vector<int> v)
 {
     for (auto i : v)
@@ -116,7 +139,7 @@ cout << "-----------------------------------------------\n";
 cout<<"|\tInsert value and Delete value from heap   |\n";
 cout << "-----------------------------------------------\n";
 
-    //  Heap insert and delete
+    //  ----------------  Heap insert and delete ---------------
     h.insert(50);
     h.insert(30);
     h.insert(40);
@@ -138,6 +161,7 @@ cout << "-----------------------------------------------\n";
     vector<int> v = {54, 53, 55, 52, 50};
     int n = v.size();
 
+    // --------------------- Max heap ----------------------
     cout << "-----------------------\n";
     cout << "|\tBefore heapify:   |\n";
     cout << "-----------------------\n";
@@ -147,6 +171,23 @@ cout << "-----------------------------------------------\n";
     for (int i = n / 2; i >= 0; i--)
     {
         heapify(v, n, i);
+    }
+
+    cout << "----------------------\n";
+    cout << "|\tAfter heapify:   |\n";
+    cout << "----------------------\n";
+    cout<<"\t";display(v);
+
+    // ---------------------Min heap ----------------------
+    cout << "--------------------------\n";
+    cout << "|\tBefore Min heapify:   |\n";
+    cout << "--------------------------\n";
+    cout<<"\t";
+    display(v);
+
+    for (int i = n / 2; i >= 0; i--)
+    {
+        Minheapify(v, n, i);
     }
 
     cout << "-----------------------\n";
