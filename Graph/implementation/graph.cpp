@@ -27,12 +27,12 @@ public:
     }
 
     // bfs traversal
-    void bfs()
+    void bfs(int startNode)
     {
         queue<int> q;
-        q.push(1);
-        vector<bool> visited(newVertices, false);
-        visited[1] = true;
+        q.push(startNode);
+        vector<bool> visited(newVertices + 1, false);
+        visited[startNode] = true;
         while (q.size() > 0)
         {
             int u = q.front();
@@ -47,12 +47,27 @@ public:
                 }
             }
         }
-        cout<<endl;
+        cout << endl;
     }
     // dfs traversal
-    void dfs()
+
+    void dfsHelper(int startNode, vector<bool> &visited)
     {
-        return;
+        cout << startNode << " ";
+        visited[startNode] = true;
+        for (auto v : adjList[startNode])
+        {
+            if (!visited[v])
+            {
+                dfsHelper(v, visited);
+            }
+        }
+    }
+    void dfs(int startNode)
+    {
+        vector<bool> visited(newVertices + 1, false);
+        dfsHelper(startNode, visited);
+        cout << endl;
     }
     // print adjacency list
     void printList()
@@ -85,11 +100,11 @@ void graphOperations()
 
     cout << "|====== BFS TRAVERSAL ======| \n";
     cout << "-------------------------------\n";
-    g.bfs();
+    g.bfs(1);
 
     cout << "|====== DFS TRAVERSAL ======| \n";
     cout << "-------------------------------\n";
-    g.dfs();
+    g.dfs(1);
 }
 int main()
 {
