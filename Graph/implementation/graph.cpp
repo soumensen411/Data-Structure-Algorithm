@@ -9,8 +9,10 @@ public:
     Graph(int vertices)
     {
         this->newVertices = vertices;
-        adjList = new list<int>[vertices+1];
+        adjList = new list<int>[vertices + 1];
     }
+
+    // insert edges into the graph
     void addEdges(int u, int v)
     {
         if (u == v)
@@ -45,8 +47,14 @@ public:
                 }
             }
         }
+        cout<<endl;
     }
-
+    // dfs traversal
+    void dfs()
+    {
+        return;
+    }
+    // print adjacency list
     void printList()
     {
         for (int i = 1; i <= newVertices; i++)
@@ -71,8 +79,17 @@ void graphOperations()
     {
         g.addEdges(from, to);
     }
+    cout << "|====== PRINT ADJACENCY LIST ======| \n";
+    cout << "--------------------------------------\n";
     g.printList();
+
+    cout << "|====== BFS TRAVERSAL ======| \n";
+    cout << "-------------------------------\n";
     g.bfs();
+
+    cout << "|====== DFS TRAVERSAL ======| \n";
+    cout << "-------------------------------\n";
+    g.dfs();
 }
 int main()
 {
