@@ -1,6 +1,8 @@
-preorder BST Traversal: 50 30 20 40 35 45 70 60 65 80 90 
-Inorder BST Traversal: 20 30 35 40 45 50 60 65 70 80 90 
-postorder BST Traversal: 20 35 45 40 30 65 60 90 80 70 50 
+preorder BST Traversal: 20 30 50 40 35 45 70 60 65 110 80 90 100 
+Inorder BST Traversal: 20 30 35 40 45 50 60 65 70 80 90 100 110 
+postorder BST Traversal: 35 45 40 65 60 100 90 80 110 70 50 30 20 
 Yes
-NO
-preorder BST Traversal: 50 30 20 40 45 70 60 65 80 90 
+Yes
+preorder BST Traversal: 20 30 50 40 45 70 60 65 110 80 90 100 
+max value: 110
+min value: 20

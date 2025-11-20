@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 class Node
 {
 public:
@@ -32,7 +33,7 @@ Node *buildBinarySerarchTree(Node *root, int value)
     return root;
 }
 
-// search for a element from a tree
+// ================ search for a element from a tree ================
 bool search(Node *root, int key)
 {
     if (root == nullptr)
@@ -125,12 +126,40 @@ Node *deleteNode(Node *root, int key)
             root->right = deleteNode(root->right, inorderSuccessor->value);
         }
     }
+    return root;
+}
+
+// ================ get maximum value from bst ================
+int getMaximum(Node *root)
+{
+    if (root == nullptr)
+    {
+        return -1;
+    }
+    int max = root->value;
+    if (max < getMaximum(root->right))
+        max = getMaximum(root->right);
+    return max;
+}
+
+// ================ get minifixnmum value from bst ================
+int getMinimum(Node *root)
+{
+    if (root == nullptr)
+    {
+        return -1;
+    }
+    while (root->left != nullptr)
+    {
+        root = root->left;
+    }
+    return root->value;
 }
 
 void BSToperations()
 {
 
-    vector<int> v = {50, 30, 20, 40, 35, 45, 70, 60, 65, 80, 90};
+    vector<int> v = {20, 30, 50, 40, 35, 45, 70, 110, 60, 65, 80, 90, 100};
     Node *root = nullptr;
     // insert data into bst
     for (auto i : v)
@@ -149,14 +178,20 @@ void BSToperations()
     cout << endl;
 
     // searching value fram a bst
-    cout << (search(root, 50) ? "Yes" : "NO") << endl; 
-    cout << (search(root, 100) ? "Yes" : "NO") << endl; 
+    cout << (search(root, 50) ? "Yes" : "NO") << endl;
+    cout << (search(root, 100) ? "Yes" : "NO") << endl;
 
     // delete Node from bst
     deleteNode(root, 35);
     cout << "preorder BST Traversal: ";
     preorderTraversal(root);
     cout << endl;
+
+    // find maximum bst element
+    cout << "max value: " << getMaximum(root) << endl;
+
+    // find minimum bst element
+    cout << "min value: " << getMinimum(root) << endl;
 }
 
 int main()
