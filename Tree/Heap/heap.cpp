@@ -10,6 +10,7 @@ public:
     {
         size = 0;
     }
+    // Insert value into max-heap. Time complexity: O(log n).
 
     void insert(int value)
     {
@@ -29,7 +30,7 @@ public:
                 break;
         }
     }
-
+    // delete element from heap
     void deleteMax()
     {
         if (size == 0)
@@ -63,7 +64,7 @@ public:
                 break;
         }
     }
-
+    // print heap element 
     void printHeap()
     {
         if (v.size() == 0)
