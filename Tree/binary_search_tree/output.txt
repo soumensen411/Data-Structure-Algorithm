@@ -1,2 +1,6 @@
-20 30 35 40 45 50 60 65 70 80 90 
+preorder BST Traversal: 50 30 20 40 35 45 70 60 65 80 90 
+Inorder BST Traversal: 20 30 35 40 45 50 60 65 70 80 90 
+postorder BST Traversal: 20 35 45 40 30 65 60 90 80 70 50 
 Yes
+NO
+preorder BST Traversal: 50 30 20 40 45 70 60 65 80 90 
