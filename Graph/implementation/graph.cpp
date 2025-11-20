@@ -26,7 +26,7 @@ public:
         }
     }
 
-    // bfs traversal
+    // BFS traversal
     void bfs(int startNode)
     {
         queue<int> q;
@@ -49,8 +49,8 @@ public:
         }
         cout << endl;
     }
-    // dfs traversal
-
+    
+    // DFS helper traversal
     void dfsHelper(int startNode, vector<bool> &visited)
     {
         cout << startNode << " ";
@@ -63,12 +63,15 @@ public:
             }
         }
     }
+    
+    // DFS Traversal
     void dfs(int startNode)
     {
         vector<bool> visited(newVertices + 1, false);
         dfsHelper(startNode, visited);
         cout << endl;
     }
+    
     // print adjacency list
     void printList()
     {
