@@ -131,10 +131,8 @@ void display(vector<int> v)
     cout << "\n\n";
 }
 
-int main()
-{
-    freopen("output.txt", "w", stdout);
-    Heap h;
+void heapOperations(){
+Heap h;
 cout << "-----------------------------------------------\n";
 cout<<"|\tInsert value and Delete value from heap   |\n";
 cout << "-----------------------------------------------\n";
@@ -194,4 +192,10 @@ cout << "-----------------------------------------------\n";
     cout << "|\tAfter heapify:   |\n";
     cout << "-----------------------\n";
     cout<<"\t";display(v);
+}
+
+int main()
+{
+    freopen("output.txt", "w", stdout);   
+    heapOperations();
 }
