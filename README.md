@@ -110,13 +110,6 @@ This repository contains implementations of various data structures and algorith
 
 </details>
 
-## 💻 Getting Started
-
-### Prerequisites
-
-Before you begin, ensure you have the following installed:
-
-- **C++ Compiler**: GCC (g++), Clang, or MSVC
-- **IDE/Editor**: Visual Studio Code, Code::Blocks, or any C++ IDE
-- **Git**: For cloning the repository
-- **Basic C++ Knowledge**: Understanding of syntax and concepts
+## 👨‍💻 Author
+**Soumen Sen**  
+GitHub: [@soumensen411](https://github.com/soumensen411)  
