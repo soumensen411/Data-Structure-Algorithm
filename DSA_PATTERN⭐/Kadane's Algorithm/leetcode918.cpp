@@ -19,7 +19,7 @@ public:
             bestEnding = max(v1, v2);
             worstEnding = min(v3, v2);
             maxSum = max(bestEnding, maxSum);
-            minSum = max(worstEnding, minSum);
+            minSum = min(worstEnding, minSum);
         }
         res = max(maxSum, totalSum - minSum);
         if (maxSum < 0)

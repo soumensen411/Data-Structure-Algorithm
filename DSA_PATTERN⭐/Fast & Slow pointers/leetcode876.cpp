@@ -35,7 +35,6 @@ int main()
     ListNode *node4 = new ListNode(4);
     ListNode *node5 = new ListNode(5);
 
-    // link nodes
     node1->next = node2;
     node2->next = node3;
     node3->next = node4;
