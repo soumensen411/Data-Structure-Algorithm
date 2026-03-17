@@ -1,0 +1,1 @@
+mul * digits[i]
