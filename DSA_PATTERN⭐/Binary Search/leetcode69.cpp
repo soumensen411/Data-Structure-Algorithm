@@ -14,11 +14,12 @@ public:
         while (high >= low)
         {
             long long int mid = (low + high) / 2;
-            if (mid * mid == x)
+            long long mulmid = mid * mid;
+            if (mulmid == x)
             {
                 return mid;
             }
-            else if (mid * mid > x)
+            else if (mulmid > x)
             {
                 high = mid - 1;
             }
